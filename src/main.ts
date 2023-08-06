@@ -6,6 +6,8 @@ import 'element-plus/dist/index.css'
 // 配置element-plus国际化
 // @ts-ignore
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+// 适配
+import '@/libflexible/flexible'
 
 // 获取应用实例
 const app = createApp(App)
