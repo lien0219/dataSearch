@@ -82,7 +82,7 @@
     // var rem = width / 10
     // docEl.style.fontSize = rem + 'px'
     // flexible.rem = win.rem = rem
-    // 因为lib-flexible的源码是针对移动端的设计方案，我们要实现PC的自适应所以屏幕尺寸也要更换
+
     if (width / dpr < 810) {
       width = 810 * dpr
     }

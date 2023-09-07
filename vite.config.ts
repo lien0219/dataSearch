@@ -2,8 +2,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import px2rem from 'postcss-px2rem'
-//mock插件提供方法
+// import px2rem from 'postcss-px2rem'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import postcssPluginPx2rem from 'postcss-plugin-px2rem'
+
 import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
@@ -17,20 +21,26 @@ export default defineConfig(({ command }) => {
         symbolId: 'icon-[dir]-[name]',
       }),
       viteMockServe({
-        localEnabled: command === 'serve', //保证开发阶段可以使用mock接口
+        localEnabled: command === 'serve',
+      }),
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
       }),
     ],
     resolve: {
       alias: {
-        '@': path.resolve('./src'), // 相对路径别名配置，使用 @ 代替 src
+        '@': path.resolve('./src'),
       },
     },
     server: {
-      port: 3000, //端口号
-      open: true, //自动打开
-      cors: true, //允许跨域
+      port: 3000,
+      open: true,
+      cors: true,
+      host: '0.0.0.0',
     },
-    // scss全局变量配置
     css: {
       preprocessorOptions: {
         scss: {
@@ -40,8 +50,10 @@ export default defineConfig(({ command }) => {
       },
       postcss: {
         plugins: [
-          px2rem({
-            remUnit: 192,
+          postcssPluginPx2rem({
+            rootValue: 192,
+            mediaQuery: false,
+            minPixelValue: 3,
           }),
         ],
       },
