@@ -11,6 +11,26 @@ export const constantRoute = [
     name: 'register',
   },
   {
+    path: '/earth',
+    component: () => import('@/views/earth/index.vue'),
+    name: 'earth',
+  },
+  {
+    path: '/panorama',
+    component: () => import('@/views/three/panorama/index.vue'),
+    name: 'panorama',
+  },
+  {
+    path: '/model',
+    component: () => import('@/views/three/model/index.vue'),
+    name: 'model',
+  },
+  {
+    path: '/modelInteraction',
+    component: () => import('@/views/three/modelInteraction/index.vue'),
+    name: 'modelInteraction',
+  },
+  {
     path: '/',
     component: () => import('@/views/home/index.vue'),
     name: 'home',
@@ -56,6 +76,11 @@ export const constantRoute = [
         path: '/reader',
         component: () => import('@/views/reader/index.vue'),
         name: 'reader',
+      },
+      {
+        path: '/screen',
+        component: () => import('@/views/screen/index.vue'),
+        name: 'screen',
       },
     ],
   },

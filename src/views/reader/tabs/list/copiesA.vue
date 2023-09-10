@@ -116,14 +116,13 @@ const activeContent = inject('activeContent')
 .listA {
   .reader_content___PdLul {
     display: inline-block;
-    height: 100%;
+    height: 840px;
     width: 100%;
     padding: 32px 48px;
     background-color: #f1f0eb;
     vertical-align: top;
     position: relative;
     border: 1px solid red;
-    height: 900px;
     overflow-y: auto;
     .pdf_con___35T-n {
       background-color: #f3f2ec;

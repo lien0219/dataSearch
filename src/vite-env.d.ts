@@ -5,3 +5,4 @@ declare module 'particles.vue3'
 
 declare module 'swiper'
 declare module 'swiperNew'
+declare module 'three'

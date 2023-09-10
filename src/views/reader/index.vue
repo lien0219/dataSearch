@@ -53,10 +53,9 @@ provide('activeContent', activeContent)
 
 <style scoped lang="scss">
 .reader {
+  height: 1100px;
   margin-top: 60px;
   padding: 0 5%;
-  min-height: 600px;
-  height: calc(100vh - 50px);
   background-color: #edece8;
   border: 1px solid red;
   .header___2LNJ3 {
@@ -168,7 +167,7 @@ provide('activeContent', activeContent)
     }
   }
   .content___2b8Xw {
-    height: 92.2%;
+    height: 1000px;
     border: 1px solid black;
   }
 }

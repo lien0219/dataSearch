@@ -1,0 +1,11 @@
+Model Information:
+* title:	LittleGriffons hollandicus00
+* source:	https://sketchfab.com/3d-models/littlegriffons-hollandicus00-e933d89fc2bc44f2a07596ce4ae2ab71
+* author:	OkameMiko (https://sketchfab.com/OkameMiko)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "LittleGriffons hollandicus00" (https://sketchfab.com/3d-models/littlegriffons-hollandicus00-e933d89fc2bc44f2a07596ce4ae2ab71) by OkameMiko (https://sketchfab.com/OkameMiko) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

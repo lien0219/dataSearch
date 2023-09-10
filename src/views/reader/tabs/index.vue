@@ -42,11 +42,12 @@ const switchCom = (item: any, index: number) => {
 
 <style scoped lang="scss">
 .tabs {
-  height: 99.8%;
+  // height: 99.8%;
+  // height: 750px;
   .con_left___2rES {
     display: inline-block;
     width: 280px;
-    height: 100%;
+    height: 1000px;
     background-color: #f3f0f0;
     border-right: 1px solid rgba(5, 5, 5, 0.06);
     overflow: auto;
@@ -82,7 +83,7 @@ const switchCom = (item: any, index: number) => {
   }
   .reader_content___PdLul {
     display: inline-block;
-    height: 100%;
+    height: 1000px;
     width: calc(100% - 280px);
     padding: 32px 48px;
     background-color: #f8f7f3;

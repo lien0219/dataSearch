@@ -37,6 +37,14 @@
           </el-sub-menu>
           <el-menu-item index="/theCharts">排行榜</el-menu-item>
           <el-menu-item index="/authorLibrary">作者库</el-menu-item>
+          <el-menu-item
+            class="screen"
+            style="padding-left: 0px; position: relative"
+            index="/screen"
+          >
+            数据分析平台
+          </el-menu-item>
+
           <el-menu-item>
             <div class="btn">
               <span @click="login">登陆</span>
@@ -167,19 +175,14 @@ ul li:nth-child(1):focus {
 ul li:nth-child(6):hover {
   background-color: unset !important;
 }
-ul li:nth-child(6):focus {
-  background-color: unset !important;
-}
+
 ul li:nth-child(3):hover {
   color: white !important;
 }
 ul li:nth-child(4):hover {
   color: white !important;
 }
-ul li:nth-child(5):hover {
-  background: none !important;
-  cursor: default;
-}
+
 ul li:nth-child(3) {
   margin-left: 20px;
   padding-left: 30px;
@@ -192,9 +195,8 @@ ul li:nth-child(4) {
 }
 ul li:nth-child(5) {
   position: fixed;
-  right: 100px;
-  height: 60px;
 }
+
 ul li:nth-child(5):focus {
   background: none !important;
 }
@@ -285,5 +287,18 @@ ul li:nth-child(4)::before {
       }
     }
   }
+}
+.screen::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  height: 30px;
+  border-left: 2px solid hsla(0, 0%, 100%, 0.28);
+}
+.screen {
+  margin-left: 15px;
 }
 </style>

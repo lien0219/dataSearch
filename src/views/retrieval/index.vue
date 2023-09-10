@@ -13,15 +13,12 @@
         <p>PDF书籍总页数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>OCR识别总字数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4,081,811</p>
       </Card>
-      <!-- 功能卡 -->
-      <Trends></Trends>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Search from './search/index.vue'
-import Trends from './trends/index.vue'
 </script>
 
 <style scoped lang="scss">

@@ -25,6 +25,8 @@ import Particles from 'particles.vue3'
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css'
+
+import * as THREE from 'three' //three
 // 获取应用实例
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -33,6 +35,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.use(ElementPlus, {
   locale: zhCn,
 })
+app.config.globalProperties.$THREE = THREE //挂载到原型
 app.use(VueAwesomeSwiper)
 app.use(gloablComponent)
 app.use(router)
