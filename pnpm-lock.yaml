@@ -32,6 +32,9 @@ dependencies:
   lib-flexible:
     specifier: ^0.3.2
     version: registry.npmmirror.com/lib-flexible@0.3.2
+  lil-gui:
+    specifier: ^0.18.2
+    version: registry.npmmirror.com/lil-gui@0.18.2
   particles.vue3:
     specifier: ^1.22.0
     version: registry.npmmirror.com/particles.vue3@1.22.0(vue@3.3.4)
@@ -5202,6 +5205,12 @@ packages:
     resolution: {integrity: sha512-9yowMWA70tKhKdCJDaltY0mNQG4OWo7pWKScnTp9aiSxS7s20ZYlwBRE3335nweOf5qKXVC7sDxJwMPM8/MFZg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lib-flexible/-/lib-flexible-0.3.2.tgz}
     name: lib-flexible
     version: 0.3.2
+    dev: false
+
+  registry.npmmirror.com/lil-gui@0.18.2:
+    resolution: {integrity: sha512-DgdrLy3/KGC0PiQLKgOcJMPItP4xY4iWgJ9+91Zaxfr8GCTmMps05QS9w9jW7yspILlbscbquwjOwxmWnSx5Uw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lil-gui/-/lil-gui-0.18.2.tgz}
+    name: lil-gui
+    version: 0.18.2
     dev: false
 
   registry.npmmirror.com/lines-and-columns@1.2.4:

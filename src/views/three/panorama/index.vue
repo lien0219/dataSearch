@@ -15,14 +15,15 @@
         padding: 0 20px;
       "
     >
-      <el-button size="mini" @click="changeName('indoor')">室内</el-button>
+      <!-- <el-button size="mini" @click="changeName('indoor')">室内</el-button> -->
+      <el-button size="mini" @click="loadModel">加载模型</el-button>
     </div>
     <div ref="environment"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import {
   Scene,
   PerspectiveCamera,
@@ -34,6 +35,7 @@ import {
   MeshLambertMaterial,
 } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const loading = ref(true)
 
@@ -79,9 +81,6 @@ const init = () => {
   camera.position.set(0, 0, 300)
   camera.lookAt(scene.position)
 
-  /**
-   * antialias消除锯齿
-   */
   const renderer = new WebGL1Renderer({ antialias: true })
   // 背景颜色
   renderer.setClearColor(0xffffff)
@@ -89,9 +88,8 @@ const init = () => {
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
 
-  /**
-   * 添加环境灯光
-   */
+  // 添加环境灯光
+
   scene.add(new AmbientLight(0xffffff, 2))
 
   environment.value?.appendChild(renderer.domElement)
@@ -101,15 +99,14 @@ const init = () => {
   const planeMaterial = new MeshLambertMaterial({ color: 0xcccccc })
   // 用来定位音源的网格模型
   const audioMesh = new Mesh(planeGeometry, planeMaterial)
-  // 设置网格模型的位置，相当于设置音源的位置
+  // 设置网格模型的位置
   audioMesh.position.set(0, 0, 300)
   scene.add(audioMesh)
 
   window.addEventListener('resize', () => onWindowResize())
 
-  /**
-   * 轨道控制器 也就是鼠标转动等操作
-   */
+  // 轨道控制器 鼠标转动
+
   let orbitControls = new OrbitControls(camera, renderer.domElement)
   orbitControls.autoRotateSpeed = 1
   orbitControls.minDistance = 50
@@ -127,7 +124,29 @@ const init = () => {
   }
 }
 
+// 加载模型
+const loadModel = () => {
+  const loader = new GLTFLoader()
+  loader.load(
+    'model/littlegriffons_sparrowzosterops/scene.gltf',
+    (gltf: any) => {
+      // console.log(gltf)
+      const model = gltf.scene
+      model.position.set(0, 0, 0)
+      model.rotation.set(0, 0, 0)
+      model.scale.set(500, 500, 500)
+      scene.add(model)
+    },
+    undefined,
+    (error: any) => {
+      // 模型加载失败后的回调函数
+      console.error('Failed to load model', error)
+    },
+  )
+}
+
 onMounted(() => {
+  // loadModel()
   init()
   changeName('')
 })

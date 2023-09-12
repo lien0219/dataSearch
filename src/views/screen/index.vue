@@ -7,7 +7,7 @@
       </el-card>
       <el-button @click="changeEarth">3D地球</el-button>
       <el-button @click="changePanorama">3D全景场景</el-button>
-      <el-button @click="changeModel">模型点击</el-button>
+      <el-button @click="changeModel">模型点击&&天空盒子</el-button>
       <el-button @click="changeEvent">模型交互</el-button>
     </div>
   </div>

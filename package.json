@@ -28,6 +28,7 @@
     "element-plus": "^2.3.9",
     "gsap": "3.11.0",
     "lib-flexible": "^0.3.2",
+    "lil-gui": "^0.18.2",
     "particles.vue3": "^1.22.0",
     "pinia": "^2.1.6",
     "postcss-plugin-px2rem": "^0.8.1",

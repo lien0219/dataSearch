@@ -34,6 +34,7 @@ declare module 'vue' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SelectSearch: typeof import('./src/components/SelectSearch/index.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']
     Test: typeof import('./src/components/Test.vue')['default']
     Title: typeof import('./src/components/Title/index.vue')['default']
